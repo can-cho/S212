@@ -1,0 +1,2134 @@
+{
+  "students": {
+    "1": {
+      "email": "mg226130171@gvcs-mg.org",
+      "grade": "7",
+      "classNum": "1",
+      "name": "강민승"
+    },
+    "2": {
+      "email": "mg226120901@gvcs-mg.org",
+      "grade": "7",
+      "classNum": "1",
+      "name": "강은결"
+    },
+    "3": {
+      "email": "mg226130131@gvcs-mg.org",
+      "grade": "7",
+      "classNum": "1",
+      "name": "공하민"
+    },
+    "4": {
+      "email": "mg226130542@gvcs-mg.org",
+      "grade": "7",
+      "classNum": "1",
+      "name": "구하은"
+    },
+    "5": {
+      "email": "mg226130292@gvcs-mg.org",
+      "grade": "7",
+      "classNum": "1",
+      "name": "김도원"
+    },
+    "6": {
+      "email": "mg226130692@gvcs-mg.org",
+      "grade": "7",
+      "classNum": "1",
+      "name": "김래나"
+    },
+    "7": {
+      "email": "mg226130441@gvcs-mg.org",
+      "grade": "7",
+      "classNum": "1",
+      "name": "김서준"
+    },
+    "8": {
+      "email": "mg226130252@gvcs-mg.org",
+      "grade": "7",
+      "classNum": "1",
+      "name": "김소연"
+    },
+    "9": {
+      "email": "mg226130522@gvcs-mg.org",
+      "grade": "7",
+      "classNum": "1",
+      "name": "김주아"
+    },
+    "10": {
+      "email": "mg226130481@gvcs-mg.org",
+      "grade": "7",
+      "classNum": "1",
+      "name": "김지호"
+    },
+    "11": {
+      "email": "mg226130161@gvcs-mg.org",
+      "grade": "7",
+      "classNum": "1",
+      "name": "김찬영"
+    },
+    "12": {
+      "email": "mg226130771@gvcs-mg.org",
+      "grade": "7",
+      "classNum": "1",
+      "name": "유한의"
+    },
+    "13": {
+      "email": "mg226120532@gvcs-mg.org",
+      "grade": "7",
+      "classNum": "1",
+      "name": "유혜인"
+    },
+    "14": {
+      "email": "mg226130851@gvcs-mg.org",
+      "grade": "7",
+      "classNum": "1",
+      "name": "이정우A"
+    },
+    "15": {
+      "email": "mg226130801@gvcs-mg.org",
+      "grade": "7",
+      "classNum": "1",
+      "name": "이주원A"
+    },
+    "16": {
+      "email": "mg226130071@gvcs-mg.org",
+      "grade": "7",
+      "classNum": "1",
+      "name": "정태이"
+    },
+    "17": {
+      "email": "mg226130911@gvcs-mg.org",
+      "grade": "7",
+      "classNum": "1",
+      "name": "최승빈"
+    },
+    "18": {
+      "email": "mg226130871@gvcs-mg.org",
+      "grade": "7",
+      "classNum": "2",
+      "name": "강이안"
+    },
+    "19": {
+      "email": "mg226130041@gvcs-mg.org",
+      "grade": "7",
+      "classNum": "2",
+      "name": "김다인"
+    },
+    "20": {
+      "email": "mg226130622@gvcs-mg.org",
+      "grade": "7",
+      "classNum": "2",
+      "name": "김서우A"
+    },
+    "21": {
+      "email": "mg226130121@gvcs-mg.org",
+      "grade": "7",
+      "classNum": "2",
+      "name": "김석훈"
+    },
+    "22": {
+      "email": "mg226130302@gvcs-mg.org",
+      "grade": "7",
+      "classNum": "2",
+      "name": "박서율"
+    },
+    "23": {
+      "email": "mg226130642@gvcs-mg.org",
+      "grade": "7",
+      "classNum": "2",
+      "name": "서이솔"
+    },
+    "24": {
+      "email": "mg226130431@gvcs-mg.org",
+      "grade": "7",
+      "classNum": "2",
+      "name": "신현"
+    },
+    "25": {
+      "email": "mg226130601@gvcs-mg.org",
+      "grade": "7",
+      "classNum": "2",
+      "name": "윤지안"
+    },
+    "26": {
+      "email": "mg226130471@gvcs-mg.org",
+      "grade": "7",
+      "classNum": "2",
+      "name": "이윤재"
+    },
+    "27": {
+      "email": "mg226130791@gvcs-mg.org",
+      "grade": "7",
+      "classNum": "2",
+      "name": "전이안"
+    },
+    "28": {
+      "email": "mg226130861@gvcs-mg.org",
+      "grade": "7",
+      "classNum": "2",
+      "name": "정성호"
+    },
+    "29": {
+      "email": "mg226130612@gvcs-mg.org",
+      "grade": "7",
+      "classNum": "2",
+      "name": "주혜원"
+    },
+    "30": {
+      "email": "mg226130461@gvcs-mg.org",
+      "grade": "7",
+      "classNum": "2",
+      "name": "최재영"
+    },
+    "31": {
+      "email": "mg226120761@gvcs-mg.org",
+      "grade": "7",
+      "classNum": "2",
+      "name": "홍준표"
+    },
+    "32": {
+      "email": "mg226130111@gvcs-mg.org",
+      "grade": "7",
+      "classNum": "3",
+      "name": "김로이"
+    },
+    "33": {
+      "email": "mg226130282@gvcs-mg.org",
+      "grade": "7",
+      "classNum": "3",
+      "name": "김민하"
+    },
+    "34": {
+      "email": "mg226130631@gvcs-mg.org",
+      "grade": "7",
+      "classNum": "3",
+      "name": "김시안"
+    },
+    "35": {
+      "email": "mg226130451@gvcs-mg.org",
+      "grade": "7",
+      "classNum": "3",
+      "name": "김윤"
+    },
+    "36": {
+      "email": "mg226130011@gvcs-mg.org",
+      "grade": "7",
+      "classNum": "3",
+      "name": "김주완"
+    },
+    "37": {
+      "email": "mg226130371@gvcs-mg.org",
+      "grade": "7",
+      "classNum": "3",
+      "name": "김지후"
+    },
+    "38": {
+      "email": "mg226130722@gvcs-mg.org",
+      "grade": "7",
+      "classNum": "3",
+      "name": "류주아"
+    },
+    "39": {
+      "email": "mg226130261@gvcs-mg.org",
+      "grade": "7",
+      "classNum": "3",
+      "name": "서예준"
+    },
+    "40": {
+      "email": "mg226130562@gvcs-mg.org",
+      "grade": "7",
+      "classNum": "3",
+      "name": "안율희"
+    },
+    "41": {
+      "email": "mg226130141@gvcs-mg.org",
+      "grade": "7",
+      "classNum": "3",
+      "name": "유지환"
+    },
+    "42": {
+      "email": "mg226130841@gvcs-mg.org",
+      "grade": "7",
+      "classNum": "3",
+      "name": "윤호"
+    },
+    "43": {
+      "email": "mg226130151@gvcs-mg.org",
+      "grade": "7",
+      "classNum": "3",
+      "name": "이도헌"
+    },
+    "44": {
+      "email": "mg226130552@gvcs-mg.org",
+      "grade": "7",
+      "classNum": "3",
+      "name": "이세연"
+    },
+    "45": {
+      "email": "mg226130782@gvcs-mg.org",
+      "grade": "7",
+      "classNum": "3",
+      "name": "이승주"
+    },
+    "46": {
+      "email": "mg226130661@gvcs-mg.org",
+      "grade": "7",
+      "classNum": "3",
+      "name": "임승민"
+    },
+    "47": {
+      "email": "mg225121321@gvcs-mg.org",
+      "grade": "8",
+      "classNum": "1",
+      "name": "김범진"
+    },
+    "48": {
+      "email": "mg226120572@gvcs-mg.org",
+      "grade": "8",
+      "classNum": "1",
+      "name": "서하민"
+    },
+    "49": {
+      "email": "mg226120271@gvcs-mg.org",
+      "grade": "8",
+      "classNum": "1",
+      "name": "신기창"
+    },
+    "50": {
+      "email": "mg226120211@gvcs-mg.org",
+      "grade": "8",
+      "classNum": "1",
+      "name": "양하준"
+    },
+    "51": {
+      "email": "mg226110081@gvcs-mg.org",
+      "grade": "8",
+      "classNum": "1",
+      "name": "이선율"
+    },
+    "52": {
+      "email": "mg225120181@gvcs-mg.org",
+      "grade": "8",
+      "classNum": "1",
+      "name": "이재호"
+    },
+    "53": {
+      "email": "mg225120242@gvcs-mg.org",
+      "grade": "8",
+      "classNum": "1",
+      "name": "이지민"
+    },
+    "54": {
+      "email": "mg225120072@gvcs-mg.org",
+      "grade": "8",
+      "classNum": "1",
+      "name": "이지유"
+    },
+    "55": {
+      "email": "mg225120261@gvcs-mg.org",
+      "grade": "8",
+      "classNum": "1",
+      "name": "이지호"
+    },
+    "56": {
+      "email": "mg225120721@gvcs-mg.org",
+      "grade": "8",
+      "classNum": "1",
+      "name": "임온찬"
+    },
+    "57": {
+      "email": "mg225120211@gvcs-mg.org",
+      "grade": "8",
+      "classNum": "1",
+      "name": "임이든"
+    },
+    "58": {
+      "email": "mg225121171@gvcs-mg.org",
+      "grade": "8",
+      "classNum": "1",
+      "name": "임지성"
+    },
+    "59": {
+      "email": "mg225120592@gvcs-mg.org",
+      "grade": "8",
+      "classNum": "1",
+      "name": "조민수"
+    },
+    "60": {
+      "email": "mg226110811@gvcs-mg.org",
+      "grade": "8",
+      "classNum": "1",
+      "name": "최라온"
+    },
+    "61": {
+      "email": "mg226120921@gvcs-mg.org",
+      "grade": "8",
+      "classNum": "1",
+      "name": "한수일"
+    },
+    "62": {
+      "email": "mg225120171@gvcs-mg.org",
+      "grade": "8",
+      "classNum": "1",
+      "name": "홍성윤"
+    },
+    "63": {
+      "email": "mg225120812@gvcs-mg.org",
+      "grade": "8",
+      "classNum": "1",
+      "name": "Davaabayar, Enguun"
+    },
+    "64": {
+      "email": "mg226120061@gvcs-mg.org",
+      "grade": "8",
+      "classNum": "2",
+      "name": "강윤성"
+    },
+    "65": {
+      "email": "mg225120201@gvcs-mg.org",
+      "grade": "8",
+      "classNum": "2",
+      "name": "김연우"
+    },
+    "66": {
+      "email": "mg225120431@gvcs-mg.org",
+      "grade": "8",
+      "classNum": "2",
+      "name": "김영우"
+    },
+    "67": {
+      "email": "mg225120401@gvcs-mg.org",
+      "grade": "8",
+      "classNum": "2",
+      "name": "김지우A"
+    },
+    "68": {
+      "email": "mg225121201@gvcs-mg.org",
+      "grade": "8",
+      "classNum": "2",
+      "name": "김지훈"
+    },
+    "69": {
+      "email": "mg225120792@gvcs-mg.org",
+      "grade": "8",
+      "classNum": "2",
+      "name": "남궁두나"
+    },
+    "70": {
+      "email": "mg225121091@gvcs-mg.org",
+      "grade": "8",
+      "classNum": "2",
+      "name": "노주환"
+    },
+    "71": {
+      "email": "mg225120121@gvcs-mg.org",
+      "grade": "8",
+      "classNum": "2",
+      "name": "박종현"
+    },
+    "72": {
+      "email": "mg226120091@gvcs-mg.org",
+      "grade": "8",
+      "classNum": "2",
+      "name": "박주형"
+    },
+    "73": {
+      "email": "mg225120331@gvcs-mg.org",
+      "grade": "8",
+      "classNum": "2",
+      "name": "이민준"
+    },
+    "74": {
+      "email": "mg225120161@gvcs-mg.org",
+      "grade": "8",
+      "classNum": "2",
+      "name": "이서준"
+    },
+    "75": {
+      "email": "mg225120062@gvcs-mg.org",
+      "grade": "8",
+      "classNum": "2",
+      "name": "이지함"
+    },
+    "76": {
+      "email": "mg225120832@gvcs-mg.org",
+      "grade": "8",
+      "classNum": "2",
+      "name": "장혜지"
+    },
+    "77": {
+      "email": "mg225120021@gvcs-mg.org",
+      "grade": "8",
+      "classNum": "2",
+      "name": "정하희"
+    },
+    "78": {
+      "email": "mg225120351@gvcs-mg.org",
+      "grade": "8",
+      "classNum": "2",
+      "name": "한의민"
+    },
+    "79": {
+      "email": "mg225120632@gvcs-mg.org",
+      "grade": "8",
+      "classNum": "2",
+      "name": "홍가희"
+    },
+    "80": {
+      "email": "mg225120752@gvcs-mg.org",
+      "grade": "8",
+      "classNum": "2",
+      "name": "황서윤"
+    },
+    "81": {
+      "email": "mg225121311@gvcs-mg.org",
+      "grade": "8",
+      "classNum": "3",
+      "name": "김수현"
+    },
+    "82": {
+      "email": "mg225120802@gvcs-mg.org",
+      "grade": "8",
+      "classNum": "3",
+      "name": "남궁두아"
+    },
+    "83": {
+      "email": "mg225120032@gvcs-mg.org",
+      "grade": "8",
+      "classNum": "3",
+      "name": "박예은"
+    },
+    "84": {
+      "email": "mg225120711@gvcs-mg.org",
+      "grade": "8",
+      "classNum": "3",
+      "name": "박주원"
+    },
+    "85": {
+      "email": "mg225120151@gvcs-mg.org",
+      "grade": "8",
+      "classNum": "3",
+      "name": "서준"
+    },
+    "86": {
+      "email": "mg226120741@gvcs-mg.org",
+      "grade": "8",
+      "classNum": "3",
+      "name": "석지훈"
+    },
+    "87": {
+      "email": "mg226120752@gvcs-mg.org",
+      "grade": "8",
+      "classNum": "3",
+      "name": "송의진"
+    },
+    "88": {
+      "email": "mg225120651@gvcs-mg.org",
+      "grade": "8",
+      "classNum": "3",
+      "name": "이래휘"
+    },
+    "89": {
+      "email": "mg225120881@gvcs-mg.org",
+      "grade": "8",
+      "classNum": "3",
+      "name": "이승현"
+    },
+    "90": {
+      "email": "mg225120191@gvcs-mg.org",
+      "grade": "8",
+      "classNum": "3",
+      "name": "이해균"
+    },
+    "91": {
+      "email": "mg225120671@gvcs-mg.org",
+      "grade": "8",
+      "classNum": "3",
+      "name": "임주왕"
+    },
+    "92": {
+      "email": "mg225121301@gvcs-mg.org",
+      "grade": "8",
+      "classNum": "3",
+      "name": "조성진"
+    },
+    "93": {
+      "email": "mg225120362@gvcs-mg.org",
+      "grade": "8",
+      "classNum": "3",
+      "name": "천지율"
+    },
+    "94": {
+      "email": "mg225120222@gvcs-mg.org",
+      "grade": "8",
+      "classNum": "3",
+      "name": "최민교"
+    },
+    "95": {
+      "email": "mg226120052@gvcs-mg.org",
+      "grade": "8",
+      "classNum": "3",
+      "name": "허진"
+    },
+    "96": {
+      "email": "mg225121181@gvcs-mg.org",
+      "grade": "8",
+      "classNum": "3",
+      "name": "허태경"
+    },
+    "97": {
+      "email": "mg225111291@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "1",
+      "name": "강산"
+    },
+    "98": {
+      "email": "mg224110321@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "1",
+      "name": "강지우"
+    },
+    "99": {
+      "email": "mg225110372@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "1",
+      "name": "강지윤"
+    },
+    "100": {
+      "email": "mg226110591@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "1",
+      "name": "고명찬"
+    },
+    "101": {
+      "email": "mg225110391@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "1",
+      "name": "김유건"
+    },
+    "102": {
+      "email": "mg224110561@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "1",
+      "name": "김학윤"
+    },
+    "103": {
+      "email": "mg226110361@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "1",
+      "name": "류제이"
+    },
+    "104": {
+      "email": "mg224111111@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "1",
+      "name": "박서준A"
+    },
+    "105": {
+      "email": "mg224110342@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "1",
+      "name": "방채라"
+    },
+    "106": {
+      "email": "mg224110351@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "1",
+      "name": "백종서"
+    },
+    "107": {
+      "email": "mg224110841@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "1",
+      "name": "변지원"
+    },
+    "108": {
+      "email": "mg225111281@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "1",
+      "name": "신한결"
+    },
+    "109": {
+      "email": "mg225111261@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "1",
+      "name": "유석훈"
+    },
+    "110": {
+      "email": "mg224110312@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "1",
+      "name": "이래윤"
+    },
+    "111": {
+      "email": "mg226110931@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "1",
+      "name": "이주혁"
+    },
+    "112": {
+      "email": "mg224110521@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "1",
+      "name": "이하율"
+    },
+    "113": {
+      "email": "mg224110272@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "1",
+      "name": "임샘물"
+    },
+    "114": {
+      "email": "mg225110972@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "1",
+      "name": "임예담"
+    },
+    "115": {
+      "email": "mg226110401@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "1",
+      "name": "조윤하"
+    },
+    "116": {
+      "email": "mg224110021@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "1",
+      "name": "지다니엘원준"
+    },
+    "117": {
+      "email": "mg224110712@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "1",
+      "name": "최서윤"
+    },
+    "118": {
+      "email": "mg225110902@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "1",
+      "name": "Bayarmagnai,Munkh-Amun"
+    },
+    "119": {
+      "email": "mg225110922@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "1",
+      "name": "Huh, Nee"
+    },
+    "120": {
+      "email": "mg225111132@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "1",
+      "name": "Kim, Joyce Seoyon"
+    },
+    "121": {
+      "email": "mg224110291@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "2",
+      "name": "김대은"
+    },
+    "122": {
+      "email": "mg226110702@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "2",
+      "name": "김래인"
+    },
+    "123": {
+      "email": "mg226110242@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "2",
+      "name": "김민정"
+    },
+    "124": {
+      "email": "mg224110771@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "2",
+      "name": "김유준"
+    },
+    "125": {
+      "email": "mg225111061@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "2",
+      "name": "김지완"
+    },
+    "126": {
+      "email": "mg224111081@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "2",
+      "name": "김지우"
+    },
+    "127": {
+      "email": "mg224110631@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "2",
+      "name": "김태웅"
+    },
+    "128": {
+      "email": "mg225111221@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "2",
+      "name": "남태양"
+    },
+    "129": {
+      "email": "mg224110172@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "2",
+      "name": "박제이"
+    },
+    "130": {
+      "email": "mg224110792@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "2",
+      "name": "변채영"
+    },
+    "131": {
+      "email": "mg225110381@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "2",
+      "name": "송하율"
+    },
+    "132": {
+      "email": "mg225111271@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "2",
+      "name": "윤종한"
+    },
+    "133": {
+      "email": "mg226110652@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "2",
+      "name": "이다민"
+    },
+    "134": {
+      "email": "mg224110011@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "2",
+      "name": "이재이"
+    },
+    "135": {
+      "email": "mg224110511@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "2",
+      "name": "이정우"
+    },
+    "136": {
+      "email": "mg224110332@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "2",
+      "name": "이주원"
+    },
+    "137": {
+      "email": "mg225110992@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "2",
+      "name": "임아인"
+    },
+    "138": {
+      "email": "mg224110622@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "2",
+      "name": "장서율"
+    },
+    "139": {
+      "email": "mg224110682@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "2",
+      "name": "조수현"
+    },
+    "140": {
+      "email": "mg226110342@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "2",
+      "name": "조시온"
+    },
+    "141": {
+      "email": "mg225110701@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "2",
+      "name": "최규현"
+    },
+    "142": {
+      "email": "mg224110641@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "2",
+      "name": "최은도"
+    },
+    "143": {
+      "email": "mg224110941@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "2",
+      "name": "홍하일"
+    },
+    "144": {
+      "email": "mg224110821@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "3",
+      "name": "김시우"
+    },
+    "145": {
+      "email": "mg224110142@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "3",
+      "name": "김시원"
+    },
+    "146": {
+      "email": "mg225110301@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "3",
+      "name": "김유현"
+    },
+    "147": {
+      "email": "mg224110282@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "3",
+      "name": "김지현A"
+    },
+    "148": {
+      "email": "mg224110652@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "3",
+      "name": "김하늬"
+    },
+    "149": {
+      "email": "mg226110732@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "3",
+      "name": "김현아"
+    },
+    "150": {
+      "email": "mg224110051@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "3",
+      "name": "김현준"
+    },
+    "151": {
+      "email": "mg224110162@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "3",
+      "name": "문하은"
+    },
+    "152": {
+      "email": "mg224110222@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "3",
+      "name": "박세령"
+    },
+    "153": {
+      "email": "mg225110931@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "3",
+      "name": "박준영"
+    },
+    "154": {
+      "email": "mg225111251@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "3",
+      "name": "서윤성"
+    },
+    "155": {
+      "email": "mg226110311@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "3",
+      "name": "우도현"
+    },
+    "156": {
+      "email": "mg225111241@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "3",
+      "name": "윤동휘"
+    },
+    "157": {
+      "email": "mg225110842@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "3",
+      "name": "이세령"
+    },
+    "158": {
+      "email": "mg224110041@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "3",
+      "name": "이은혁"
+    },
+    "159": {
+      "email": "mg224110591@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "3",
+      "name": "이준희"
+    },
+    "160": {
+      "email": "mg224110971@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "3",
+      "name": "이하겸"
+    },
+    "161": {
+      "email": "mg226110331@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "3",
+      "name": "이하준"
+    },
+    "162": {
+      "email": "mg224110461@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "3",
+      "name": "이현규"
+    },
+    "163": {
+      "email": "mg225111071@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "3",
+      "name": "조규환"
+    },
+    "164": {
+      "email": "mg224120032@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "3",
+      "name": "조아연"
+    },
+    "165": {
+      "email": "mg226110101@gvcs-mg.org",
+      "grade": "9",
+      "classNum": "3",
+      "name": "하성현"
+    },
+    "166": {
+      "email": "mg224101281@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "1",
+      "name": "권희연"
+    },
+    "167": {
+      "email": "mg224101051@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "1",
+      "name": "김도현"
+    },
+    "168": {
+      "email": "mg225100762@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "1",
+      "name": "김서우"
+    },
+    "169": {
+      "email": "mg224100912@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "1",
+      "name": "김예린A"
+    },
+    "170": {
+      "email": "mg226100492@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "1",
+      "name": "김하윤"
+    },
+    "171": {
+      "email": "mg225100111@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "1",
+      "name": "노유담"
+    },
+    "172": {
+      "email": "mg225101331@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "1",
+      "name": "문주혁"
+    },
+    "173": {
+      "email": "mg226090502@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "1",
+      "name": "박지인"
+    },
+    "174": {
+      "email": "mg226090511@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "1",
+      "name": "박현"
+    },
+    "175": {
+      "email": "mg226100672@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "1",
+      "name": "신라희"
+    },
+    "176": {
+      "email": "mg226100201@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "1",
+      "name": "신주원"
+    },
+    "177": {
+      "email": "mg224100581@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "1",
+      "name": "운유현"
+    },
+    "178": {
+      "email": "mg223100042@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "1",
+      "name": "윤가람"
+    },
+    "179": {
+      "email": "mg223100131@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "1",
+      "name": "이에녹"
+    },
+    "180": {
+      "email": "mg225100342@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "1",
+      "name": "이하은B"
+    },
+    "181": {
+      "email": "mg224100202@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "1",
+      "name": "임환희"
+    },
+    "182": {
+      "email": "mg225101341@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "1",
+      "name": "전준호"
+    },
+    "183": {
+      "email": "mg223100192@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "1",
+      "name": "조성민B"
+    },
+    "184": {
+      "email": "mg225101041@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "1",
+      "name": "최규민"
+    },
+    "185": {
+      "email": "mg224101241@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "1",
+      "name": "최지호"
+    },
+    "186": {
+      "email": "mg224100781@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "1",
+      "name": "홍승현"
+    },
+    "187": {
+      "email": "mg226100222@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "1",
+      "name": "황라온"
+    },
+    "188": {
+      "email": "mg225090911@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "1",
+      "name": "Huh, Won"
+    },
+    "189": {
+      "email": "mg226100021@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "1",
+      "name": "Sianturi, Steven Imanuel"
+    },
+    "190": {
+      "email": "mg224101291@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "2",
+      "name": "권규연"
+    },
+    "191": {
+      "email": "mg226100382@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "2",
+      "name": "권샘물"
+    },
+    "192": {
+      "email": "mg223100021@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "2",
+      "name": "김강휘"
+    },
+    "193": {
+      "email": "mg224100182@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "2",
+      "name": "김나예"
+    },
+    "194": {
+      "email": "mg225101351@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "2",
+      "name": "김성율"
+    },
+    "195": {
+      "email": "mg226100322@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "2",
+      "name": "김수빈"
+    },
+    "196": {
+      "email": "mg224101212@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "2",
+      "name": "김시윤"
+    },
+    "197": {
+      "email": "mg226100391@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "2",
+      "name": "김재욱"
+    },
+    "198": {
+      "email": "mg224101421@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "2",
+      "name": "김준석A"
+    },
+    "199": {
+      "email": "mg225101001@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "2",
+      "name": "김희준"
+    },
+    "200": {
+      "email": "mg224101332@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "2",
+      "name": "문서연"
+    },
+    "201": {
+      "email": "mg223100152@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "2",
+      "name": "박이솔"
+    },
+    "202": {
+      "email": "mg226100181@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "2",
+      "name": "배혜성"
+    },
+    "203": {
+      "email": "mg224100762@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "2",
+      "name": "신예은"
+    },
+    "204": {
+      "email": "mg225100311@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "2",
+      "name": "심요담"
+    },
+    "205": {
+      "email": "mg225101082@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "2",
+      "name": "오주하"
+    },
+    "206": {
+      "email": "mg223100172@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "2",
+      "name": "이수민C"
+    },
+    "207": {
+      "email": "mg223100791@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "2",
+      "name": "이시우"
+    },
+    "208": {
+      "email": "mg226100351@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "2",
+      "name": "이준규"
+    },
+    "209": {
+      "email": "mg226100941@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "2",
+      "name": "이하진"
+    },
+    "210": {
+      "email": "mg226080191@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "2",
+      "name": "정예준"
+    },
+    "211": {
+      "email": "mg225100981@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "2",
+      "name": "정진수"
+    },
+    "212": {
+      "email": "mg223100121@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "2",
+      "name": "하성윤"
+    },
+    "213": {
+      "email": "mg223100141@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "2",
+      "name": "홍성흔"
+    },
+    "214": {
+      "email": "mg225101032@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "3",
+      "name": "공서현"
+    },
+    "215": {
+      "email": "mg225110512@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "3",
+      "name": "김유안"
+    },
+    "216": {
+      "email": "mg225101111@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "3",
+      "name": "김인후"
+    },
+    "217": {
+      "email": "mg225100131@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "3",
+      "name": "박시율"
+    },
+    "218": {
+      "email": "mg225101102@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "3",
+      "name": "백유빈"
+    },
+    "219": {
+      "email": "mg225100101@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "3",
+      "name": "서명교"
+    },
+    "220": {
+      "email": "mg226100581@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "3",
+      "name": "서상민"
+    },
+    "221": {
+      "email": "mg226100891@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "3",
+      "name": "손건후"
+    },
+    "222": {
+      "email": "mg226100711@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "3",
+      "name": "안현성"
+    },
+    "223": {
+      "email": "mg226100421@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "3",
+      "name": "이도원"
+    },
+    "224": {
+      "email": "mg226100831@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "3",
+      "name": "이도원A"
+    },
+    "225": {
+      "email": "mg225100961@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "3",
+      "name": "이명준"
+    },
+    "226": {
+      "email": "mg226100411@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "3",
+      "name": "이예반"
+    },
+    "227": {
+      "email": "mg225100951@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "3",
+      "name": "이은휼"
+    },
+    "228": {
+      "email": "mg224100492@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "3",
+      "name": "이지안"
+    },
+    "229": {
+      "email": "mg222101301@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "3",
+      "name": "임승현"
+    },
+    "230": {
+      "email": "mg223100071@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "3",
+      "name": "정강우"
+    },
+    "231": {
+      "email": "mg226100881@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "3",
+      "name": "채태윤"
+    },
+    "232": {
+      "email": "mg226100681@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "3",
+      "name": "최창대"
+    },
+    "233": {
+      "email": "mg224101122@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "3",
+      "name": "한수정"
+    },
+    "234": {
+      "email": "mg223100842@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "3",
+      "name": "BAYARAA, BYALKHAMJARGAL"
+    },
+    "235": {
+      "email": "mg225090822@gvcs-mg.org",
+      "grade": "10",
+      "classNum": "3",
+      "name": "Rentsen-Ochir, Ariunzaya"
+    },
+    "236": {
+      "email": "mg224091071@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "1",
+      "name": "권하준"
+    },
+    "237": {
+      "email": "mg224090661@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "1",
+      "name": "김선우"
+    },
+    "238": {
+      "email": "mg225090281@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "1",
+      "name": "김진수"
+    },
+    "239": {
+      "email": "mg225080562@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "1",
+      "name": "나현지"
+    },
+    "240": {
+      "email": "mg224090812@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "1",
+      "name": "류규미"
+    },
+    "241": {
+      "email": "mg224091351@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "1",
+      "name": "안우진"
+    },
+    "242": {
+      "email": "mg222090231@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "1",
+      "name": "여정훈"
+    },
+    "243": {
+      "email": "mg224091232@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "1",
+      "name": "오지효"
+    },
+    "244": {
+      "email": "mg224091001@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "1",
+      "name": "오지훈"
+    },
+    "245": {
+      "email": "mg223090742@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "1",
+      "name": "우은혜B"
+    },
+    "246": {
+      "email": "mg222090361@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "1",
+      "name": "이이삭"
+    },
+    "247": {
+      "email": "mg222090381@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "1",
+      "name": "이주영"
+    },
+    "248": {
+      "email": "mg222090161@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "1",
+      "name": "이지율"
+    },
+    "249": {
+      "email": "mg225090771@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "1",
+      "name": "임한민"
+    },
+    "250": {
+      "email": "mg224090261@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "1",
+      "name": "조정우"
+    },
+    "251": {
+      "email": "mg225090741@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "1",
+      "name": "진하윤"
+    },
+    "252": {
+      "email": "mg224080421@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "1",
+      "name": "최예성"
+    },
+    "253": {
+      "email": "mg221091201@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "1",
+      "name": "최현서"
+    },
+    "254": {
+      "email": "mg224091132@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "1",
+      "name": "한수진"
+    },
+    "255": {
+      "email": "mg222080732@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "2",
+      "name": "강예빈"
+    },
+    "256": {
+      "email": "mg224081322@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "2",
+      "name": "김윤지"
+    },
+    "257": {
+      "email": "mg222090372@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "2",
+      "name": "김은혜F"
+    },
+    "258": {
+      "email": "mg222091321@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "2",
+      "name": "김하겸B"
+    },
+    "259": {
+      "email": "mg225090692@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "2",
+      "name": "김희원"
+    },
+    "260": {
+      "email": "mg222090301@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "2",
+      "name": "박하음"
+    },
+    "261": {
+      "email": "mg224091201@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "2",
+      "name": "백지월"
+    },
+    "262": {
+      "email": "mg225090571@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "2",
+      "name": "송윤서"
+    },
+    "263": {
+      "email": "mg224090211@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "2",
+      "name": "신지용"
+    },
+    "264": {
+      "email": "mg222090331@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "2",
+      "name": "운유송"
+    },
+    "265": {
+      "email": "mg224091431@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "2",
+      "name": "윤주호"
+    },
+    "266": {
+      "email": "mg222090271@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "2",
+      "name": "이동현C"
+    },
+    "267": {
+      "email": "mg222090281@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "2",
+      "name": "이민섭"
+    },
+    "268": {
+      "email": "mg222090391@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "2",
+      "name": "이서준B"
+    },
+    "269": {
+      "email": "mg225090462@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "2",
+      "name": "조은서"
+    },
+    "270": {
+      "email": "mg225090451@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "2",
+      "name": "조인택"
+    },
+    "271": {
+      "email": "mg225090892@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "2",
+      "name": "Bayarmagnai,Munkh-Amin"
+    },
+    "272": {
+      "email": "mg225090871@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "2",
+      "name": "Prasetya, Kohen Adit"
+    },
+    "273": {
+      "email": "mg225090862@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "2",
+      "name": "Pratama, Angelica Devi"
+    },
+    "274": {
+      "email": "mg225090492@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "3",
+      "name": "김나린"
+    },
+    "275": {
+      "email": "mg224090961@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "3",
+      "name": "김영휘"
+    },
+    "276": {
+      "email": "mg224090251@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "3",
+      "name": "김주헌"
+    },
+    "277": {
+      "email": "mg222090351@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "3",
+      "name": "김하준"
+    },
+    "278": {
+      "email": "mg225090581@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "3",
+      "name": "류시헌"
+    },
+    "279": {
+      "email": "mg225090501@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "3",
+      "name": "명민규"
+    },
+    "280": {
+      "email": "mg224090991@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "3",
+      "name": "박규태"
+    },
+    "281": {
+      "email": "mg221091172@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "3",
+      "name": "박승민"
+    },
+    "282": {
+      "email": "mg222090681@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "3",
+      "name": "박주영"
+    },
+    "283": {
+      "email": "mg224090122@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "3",
+      "name": "송효원"
+    },
+    "284": {
+      "email": "mg222090181@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "3",
+      "name": "엄세영"
+    },
+    "285": {
+      "email": "mg224091142@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "3",
+      "name": "윤채은"
+    },
+    "286": {
+      "email": "mg225091021@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "3",
+      "name": "이다솔"
+    },
+    "287": {
+      "email": "mg225090612@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "3",
+      "name": "이다인"
+    },
+    "288": {
+      "email": "mg223090721@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "3",
+      "name": "이동석"
+    },
+    "289": {
+      "email": "mg225090682@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "3",
+      "name": "이예찬"
+    },
+    "290": {
+      "email": "mg225090481@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "3",
+      "name": "임은찬"
+    },
+    "291": {
+      "email": "mg221091181@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "3",
+      "name": "주지원"
+    },
+    "292": {
+      "email": "mg224091481@gvcs-mg.org",
+      "grade": "11",
+      "classNum": "3",
+      "name": "한지원A"
+    },
+    "293": {
+      "email": "mg221080181@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "1",
+      "name": "강민성"
+    },
+    "294": {
+      "email": "mg224080892@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "1",
+      "name": "강민지"
+    },
+    "295": {
+      "email": "mg222080051@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "1",
+      "name": "권태연"
+    },
+    "296": {
+      "email": "mg222080041@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "1",
+      "name": "김선윤"
+    },
+    "297": {
+      "email": "mg222080032@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "1",
+      "name": "남가빈"
+    },
+    "298": {
+      "email": "mg223080291@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "1",
+      "name": "서예성"
+    },
+    "299": {
+      "email": "mg221080442@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "1",
+      "name": "심예진"
+    },
+    "300": {
+      "email": "mg223080592@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "1",
+      "name": "이서현"
+    },
+    "301": {
+      "email": "mg223080582@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "1",
+      "name": "이수린"
+    },
+    "302": {
+      "email": "mg224080601@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "1",
+      "name": "이원희"
+    },
+    "303": {
+      "email": "mg224081272@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "1",
+      "name": "이지수"
+    },
+    "304": {
+      "email": "mg224080722@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "1",
+      "name": "이하현"
+    },
+    "305": {
+      "email": "mg224081032@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "1",
+      "name": "이한비"
+    },
+    "306": {
+      "email": "mg224080191@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "1",
+      "name": "임우징"
+    },
+    "307": {
+      "email": "mg221080332@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "1",
+      "name": "정예렘"
+    },
+    "308": {
+      "email": "mg222081211@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "1",
+      "name": "지민준"
+    },
+    "309": {
+      "email": "mg222080061@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "1",
+      "name": "지혜성"
+    },
+    "310": {
+      "email": "mg221080751@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "1",
+      "name": "최태현"
+    },
+    "311": {
+      "email": "mg224080741@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "1",
+      "name": "최한결"
+    },
+    "312": {
+      "email": "mg222080011@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "1",
+      "name": "하지훈"
+    },
+    "313": {
+      "email": "mg224080702@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "2",
+      "name": "김성연"
+    },
+    "314": {
+      "email": "mg225080942@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "2",
+      "name": "김세빈"
+    },
+    "315": {
+      "email": "mg221080781@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "2",
+      "name": "김영준A"
+    },
+    "316": {
+      "email": "mg224080411@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "2",
+      "name": "김예찬"
+    },
+    "317": {
+      "email": "mg224080362@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "2",
+      "name": "김지오"
+    },
+    "318": {
+      "email": "mg224071161@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "2",
+      "name": "박예준"
+    },
+    "319": {
+      "email": "mg224080531@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "2",
+      "name": "변정후"
+    },
+    "320": {
+      "email": "mg224080691@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "2",
+      "name": "서현진"
+    },
+    "321": {
+      "email": "mg220070241@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "2",
+      "name": "성열휘"
+    },
+    "322": {
+      "email": "mg224081102@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "2",
+      "name": "송민경"
+    },
+    "323": {
+      "email": "mg224081181@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "2",
+      "name": "송민호"
+    },
+    "324": {
+      "email": "mg224080482@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "2",
+      "name": "신사라"
+    },
+    "325": {
+      "email": "mg221080452@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "2",
+      "name": "심예은"
+    },
+    "326": {
+      "email": "mg221080922@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "2",
+      "name": "안규리"
+    },
+    "327": {
+      "email": "mg223080281@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "2",
+      "name": "엄정후"
+    },
+    "328": {
+      "email": "mg224081311@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "2",
+      "name": "이기상"
+    },
+    "329": {
+      "email": "mg224080612@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "2",
+      "name": "이채민"
+    },
+    "330": {
+      "email": "mg224080751@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "2",
+      "name": "정은수"
+    },
+    "331": {
+      "email": "mg224080441@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "2",
+      "name": "조승운"
+    },
+    "332": {
+      "email": "mg224080572@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "2",
+      "name": "조윤서"
+    },
+    "333": {
+      "email": "mg223080321@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "2",
+      "name": "최지웅"
+    },
+    "334": {
+      "email": "mg221080682@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "3",
+      "name": "김가현"
+    },
+    "335": {
+      "email": "mg223080701@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "3",
+      "name": "김동훈"
+    },
+    "336": {
+      "email": "mg223080712@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "3",
+      "name": "김서현C"
+    },
+    "337": {
+      "email": "mg223080762@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "3",
+      "name": "김주하B"
+    },
+    "338": {
+      "email": "mg221081071@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "3",
+      "name": "김하음"
+    },
+    "339": {
+      "email": "mg223080371@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "3",
+      "name": "박재현"
+    },
+    "340": {
+      "email": "mg224070382@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "3",
+      "name": "박하은"
+    },
+    "341": {
+      "email": "mg223080662@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "3",
+      "name": "백서진"
+    },
+    "342": {
+      "email": "mg224070542@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "3",
+      "name": "송시연"
+    },
+    "343": {
+      "email": "mg223080601@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "3",
+      "name": "송재현"
+    },
+    "344": {
+      "email": "mg221080261@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "3",
+      "name": "송현준"
+    },
+    "345": {
+      "email": "mg221080321@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "3",
+      "name": "이건희"
+    },
+    "346": {
+      "email": "mg221081031@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "3",
+      "name": "이용준"
+    },
+    "347": {
+      "email": "mg221080652@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "3",
+      "name": "이윤지"
+    },
+    "348": {
+      "email": "mg223080612@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "3",
+      "name": "정다희"
+    },
+    "349": {
+      "email": "mg224081261@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "3",
+      "name": "정소망"
+    },
+    "350": {
+      "email": "mg224080851@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "3",
+      "name": "정온유"
+    },
+    "351": {
+      "email": "mg221080291@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "3",
+      "name": "최종민"
+    },
+    "352": {
+      "email": "mg223080441@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "3",
+      "name": "홍유준"
+    },
+    "353": {
+      "email": "mg224081452@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "3",
+      "name": "Putri, Naysilla Azkiya"
+    },
+    "354": {
+      "email": "mg224091442@gvcs-mg.org",
+      "grade": "12",
+      "classNum": "3",
+      "name": "Tambotoh, Hanna Angelia"
+    },
+"355": {
+      "email": "inhak@gvcs-mg.org",
+      "grade": "13",
+      "classNum": "4",
+      "name": "김인학"
+    }
+  }
+}

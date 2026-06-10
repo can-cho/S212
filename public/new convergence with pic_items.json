@@ -1,0 +1,387 @@
+{
+  "item_001": {
+    "availableQuantity": 12,
+    "category": "전자기기",
+    "name": "3D 펜 (고급형)",
+    "spec": "PLA/ABS 호환",
+    "totalQuantity": 12
+  },
+  "item_002": {
+    "availableQuantity": 20,
+    "category": "소모품",
+    "name": "3D 펜 필라멘트 (PLA, 혼합색상)",
+    "spec": "1.75mm, 10색 세트",
+    "totalQuantity": 20
+  },
+  "item_003": {
+    "availableQuantity": 30,
+    "category": "교구",
+    "name": "아두이노 우노 R3 호환보드",
+    "spec": "DIP 타입, 케이블 포함",
+    "totalQuantity": 30
+  },
+  "item_004": {
+    "availableQuantity": 9,
+    "category": "교구",
+    "name": "아두이노 메가 2560",
+    "spec": "복잡한 회로 구성용",
+    "totalQuantity": 10
+  },
+  "item_005": {
+    "availableQuantity": 15,
+    "category": "교구",
+    "name": "아두이노 나노",
+    "spec": "소형 프로젝트용",
+    "totalQuantity": 15
+  },
+  "item_006": {
+    "availableQuantity": 12,
+    "category": "전자기기",
+    "name": "라즈베리파이 4B (4GB)",
+    "spec": "방열판/케이스 포함",
+    "totalQuantity": 12
+  },
+  "item_007": {
+    "availableQuantity": 5,
+    "category": "전자기기",
+    "name": "라즈베리파이 4B (8GB)",
+    "spec": "고사양 비전 처리용",
+    "totalQuantity": 5
+  },
+  "item_008": {
+    "availableQuantity": 25,
+    "category": "교구",
+    "name": "마이크로비트 V2",
+    "spec": "블록코딩용 소형 보드",
+    "totalQuantity": 25
+  },
+  "item_009": {
+    "availableQuantity": 19,
+    "category": "교구",
+    "name": "ESP32 (Wi-Fi/Bluetooth)",
+    "spec": "IoT 프로젝트용",
+    "totalQuantity": 20
+  },
+  "item_010": {
+    "availableQuantity": 15,
+    "category": "교구",
+    "name": "ESP8266 (NodeMCU)",
+    "spec": "Wi-Fi 통신 모듈",
+    "totalQuantity": 15
+  },
+  "item_011": {
+    "availableQuantity": 3,
+    "category": "전자기기",
+    "name": "Jetson Nano 2GB",
+    "spec": "AI 및 딥러닝 입문용",
+    "totalQuantity": 3
+  },
+  "item_012": {
+    "availableQuantity": 40,
+    "category": "부품",
+    "name": "초음파 센서 (HC-SR04)",
+    "spec": "거리 측정용",
+    "totalQuantity": 40
+  },
+  "item_013": {
+    "availableQuantity": 30,
+    "category": "부품",
+    "name": "온습도 센서 (DHT11)",
+    "spec": "기본 온습도 측정",
+    "totalQuantity": 30
+  },
+  "item_014": {
+    "availableQuantity": 30,
+    "category": "부품",
+    "name": "적외선 장애물 회피 센서",
+    "spec": "라인트레이서용",
+    "totalQuantity": 30
+  },
+  "item_015": {
+    "availableQuantity": 50,
+    "category": "부품",
+    "name": "서보 모터 (SG90)",
+    "spec": "소형 180도 회전 모터",
+    "totalQuantity": 50
+  },
+  "item_016": {
+    "availableQuantity": 20,
+    "category": "부품",
+    "name": "DC 모터 & 바퀴 세트",
+    "spec": "RC카 제작용",
+    "totalQuantity": 20
+  },
+  "item_017": {
+    "availableQuantity": 20,
+    "category": "부품",
+    "name": "L298N 모터 드라이버",
+    "spec": "DC/스텝 모터 제어용",
+    "totalQuantity": 20
+  },
+  "item_018": {
+    "availableQuantity": 40,
+    "category": "부품",
+    "name": "브레드보드 (하프 사이즈)",
+    "spec": "400핀 빵판",
+    "totalQuantity": 40
+  },
+  "item_019": {
+    "availableQuantity": 30,
+    "category": "부품",
+    "name": "브레드보드 (풀 사이즈)",
+    "spec": "830핀 빵판",
+    "totalQuantity": 30
+  },
+  "item_020": {
+    "availableQuantity": 30,
+    "category": "부품",
+    "name": "점퍼 케이블 세트 (M-M/M-F/F-F)",
+    "spec": "길이 혼합 120가닥",
+    "totalQuantity": 30
+  },
+  "item_021": {
+    "availableQuantity": 8,
+    "category": "전자기기",
+    "name": "LG 그램 16인치 노트북",
+    "spec": "i5, 16GB, 코딩용",
+    "totalQuantity": 8
+  },
+  "item_022": {
+    "availableQuantity": 4,
+    "category": "전자기기",
+    "name": "맥북 에어 M2",
+    "spec": "영상 편집 및 iOS 앱 개발",
+    "totalQuantity": 4
+  },
+  "item_023": {
+    "availableQuantity": 5,
+    "category": "전자기기",
+    "name": "아이패드 에어 5세대",
+    "spec": "디자인 및 필기용 (펜슬 포함)",
+    "totalQuantity": 5
+  },
+  "item_024": {
+    "availableQuantity": 3,
+    "category": "전자기기",
+    "name": "갤럭시 탭 S8",
+    "spec": "안드로이드 앱 테스트용",
+    "totalQuantity": 3
+  },
+  "item_025": {
+    "availableQuantity": 2,
+    "category": "전자기기",
+    "name": "DJI 미니 3 프로",
+    "spec": "4K 촬영용 소형 드론",
+    "totalQuantity": 2
+  },
+  "item_026": {
+    "availableQuantity": 5,
+    "category": "교구",
+    "name": "Tello 에듀 드론",
+    "spec": "파이썬 코딩 제어용",
+    "totalQuantity": 5
+  },
+  "item_027": {
+    "availableQuantity": 6,
+    "category": "교구",
+    "name": "레고 스파이크 프라임 기본 세트",
+    "spec": "로봇 공학 교육용",
+    "totalQuantity": 6
+  },
+  "item_028": {
+    "availableQuantity": 4,
+    "category": "교구",
+    "name": "레고 마인드스톰 EV3",
+    "spec": "고급 로봇 조립 세트",
+    "totalQuantity": 4
+  },
+  "item_029": {
+    "availableQuantity": 5,
+    "category": "교구",
+    "name": "스피로(Sphero) 볼트",
+    "spec": "구형 로봇 코딩",
+    "totalQuantity": 5
+  },
+  "item_030": {
+    "availableQuantity": 10,
+    "category": "교구",
+    "name": "오조봇 이보",
+    "spec": "선 따라가는 코딩 로봇",
+    "totalQuantity": 10
+  },
+  "item_031": {
+    "availableQuantity": 10,
+    "category": "공구",
+    "name": "아크릴 절단 칼",
+    "spec": "아크릴 및 플라스틱 전용",
+    "totalQuantity": 10
+  },
+  "item_032": {
+    "availableQuantity": 3,
+    "category": "공구",
+    "name": "열풍기 (히팅건)",
+    "spec": "수축 튜브 및 건조 작업용",
+    "totalQuantity": 3
+  },
+  "item_033": {
+    "availableQuantity": 15,
+    "category": "공구",
+    "name": "글루건 (소형)",
+    "spec": "공작용, 글루스틱 별도",
+    "totalQuantity": 15
+  },
+  "item_034": {
+    "availableQuantity": 8,
+    "category": "공구",
+    "name": "납땜기 (온도 조절형)",
+    "spec": "정밀 회로 납땜용",
+    "totalQuantity": 8
+  },
+  "item_035": {
+    "availableQuantity": 10,
+    "category": "소모품",
+    "name": "무연 납 (실납)",
+    "spec": "친환경 무연납 1롤",
+    "totalQuantity": 10
+  },
+  "item_036": {
+    "availableQuantity": 5,
+    "category": "공구",
+    "name": "납 흡입기 (디솔더링 펌프)",
+    "spec": "수리 및 납 제거용",
+    "totalQuantity": 5
+  },
+  "item_037": {
+    "availableQuantity": 6,
+    "category": "측정기기",
+    "name": "디지털 멀티미터",
+    "spec": "전압, 전류, 저항 측정",
+    "totalQuantity": 6
+  },
+  "item_038": {
+    "availableQuantity": 10,
+    "category": "공구",
+    "name": "와이어 스트리퍼",
+    "spec": "전선 피복 탈피기",
+    "totalQuantity": 10
+  },
+  "item_039": {
+    "availableQuantity": 15,
+    "category": "공구",
+    "name": "니퍼",
+    "spec": "전선 및 플라스틱 절단용",
+    "totalQuantity": 15
+  },
+  "item_040": {
+    "availableQuantity": 15,
+    "category": "공구",
+    "name": "롱노우즈 플라이어",
+    "spec": "좁은 곳의 부품 집게",
+    "totalQuantity": 15
+  },
+  "item_041": {
+    "availableQuantity": 5,
+    "category": "측정기기",
+    "name": "디지털 버니어 캘리퍼스",
+    "spec": "정밀 치수 측정 (0.01mm)",
+    "totalQuantity": 5
+  },
+  "item_042": {
+    "availableQuantity": 8,
+    "category": "공구",
+    "name": "정밀 드라이버 세트",
+    "spec": "소형 전자기기 분해용",
+    "totalQuantity": 8
+  },
+  "item_043": {
+    "availableQuantity": 2,
+    "category": "공구",
+    "name": "전동 드라이버 (보쉬)",
+    "spec": "소형 비트 포함",
+    "totalQuantity": 2
+  },
+  "item_044": {
+    "availableQuantity": 20,
+    "category": "소모품",
+    "name": "AA 건전지 (4개입)",
+    "spec": "모터 및 센서 전원용",
+    "totalQuantity": 20
+  },
+  "item_045": {
+    "availableQuantity": 16,
+    "category": "부품",
+    "name": "18650 리튬이온 배터리",
+    "spec": "RC카 및 고출력 전원용",
+    "totalQuantity": 16
+  },
+  "item_046": {
+    "availableQuantity": 4,
+    "category": "전자기기",
+    "name": "18650 배터리 충전기",
+    "spec": "4구 동시 충전 가능",
+    "totalQuantity": 4
+  },
+  "item_047": {
+    "availableQuantity": 10,
+    "category": "부품",
+    "name": "네오디뮴 자석 세트",
+    "spec": "원형 및 사각 혼합",
+    "totalQuantity": 10
+  },
+  "item_048": {
+    "availableQuantity": 30,
+    "category": "소모품",
+    "name": "아크릴 판 (A4 사이즈)",
+    "spec": "외관 제작용 (투명/반투명)",
+    "totalQuantity": 30
+  },
+  "item_049": {
+    "availableQuantity": 10,
+    "category": "부품",
+    "name": "M3 볼트/너트 구색 세트",
+    "spec": "기구물 조립용",
+    "totalQuantity": 10
+  },
+  "item_050": {
+    "availableQuantity": 15,
+    "category": "소모품",
+    "name": "케이블 타이 (100개입)",
+    "spec": "선 정리용 (소/중 혼합)",
+    "totalQuantity": 15
+  },
+  "item_051": {
+    "availableQuantity": 20,
+    "category": "소모품",
+    "name": "절연 테이프 (흑색)",
+    "spec": "전선 마감용",
+    "totalQuantity": 20
+  },
+  "item_052": {
+    "availableQuantity": 10,
+    "category": "소모품",
+    "name": "수축 튜브 세트",
+    "spec": "다양한 두께 혼합",
+    "totalQuantity": 10
+  },
+  "item_053": {
+    "availableQuantity": 4,
+    "category": "전자기기",
+    "name": "웹캠 (Logitech C920)",
+    "spec": "컴퓨터 비전 트래킹용",
+    "totalQuantity": 4
+  },
+  "item_054": {
+    "availableQuantity": 5,
+    "category": "전자기기",
+    "name": "마이크 (핀마이크)",
+    "spec": "음성 인식 프로젝트용",
+    "totalQuantity": 5
+  },
+  "item_055": {
+    "availableQuantity": 5,
+    "category": "전자기기",
+    "name": "스피커 (소형 USB)",
+    "spec": "사운드 출력 프로젝트용",
+    "totalQuantity": 5
+  }
+}
