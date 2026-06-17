@@ -4,7 +4,9 @@ import { rtdb } from '../lib/firebase';
 import { useNavigate } from 'react-router-dom';
 import { 
   Search, Plus, Edit, Trash2, X, Image, 
-  Loader2, Camera, Home, LayoutGrid, Grid, List, Zap, Bell, Clock, ShieldAlert, CheckCircle, AlertCircle
+  Loader2, Camera, Home, LayoutGrid, Grid, List, Zap, Bell, Clock, 
+  ShieldAlert, CheckCircle, AlertCircle, Eye, ListOrdered, User, Calendar,
+  Download, Mail, AlertOctagon // 💡 추가된 아이콘
 } from 'lucide-react';
 import { useAuthStore } from '../store/useAuthStore'; 
 
@@ -25,8 +27,8 @@ export default function Admin() {
   const [reqTab, setReqTab] = useState<'all' | 'rental_pending' | 'return_pending' | 'extension_pending'>('rental_pending');
   const [editItemId, setEditItemId] = useState<string | null>(null);
   
-  // 💡 알림/로그 선택 시 상세 정보를 띄워줄 팝업 모달 상태 추가
   const [detailModal, setDetailModal] = useState<{ isOpen: boolean; rental: any }>({ isOpen: false, rental: null });
+  const [isStatusModalOpen, setIsStatusModalOpen] = useState(false);
 
   const [formData, setFormData] = useState({ 
     name: '', category: '', spec: '', totalQuantity: 1, availableQuantity: 1, imageUrl: '' 
@@ -65,9 +67,68 @@ export default function Admin() {
     return matchesSearch && (selectedCategory === '전체' || item.category === selectedCategory);
   });
   
-  const pendingRentals = rentals.filter(r => r.status.includes('pending'));
-  const pendingCount = pendingRentals.length;
+  const countRentalPending = rentals.filter(r => r.status === 'rental_pending').length;
+  const countReturnPending = rentals.filter(r => r.status === 'return_pending').length;
+  const countExtensionPending = rentals.filter(r => r.status === 'extension_pending').length;
+  const pendingCount = countRentalPending + countReturnPending + countExtensionPending;
 
+  const activeRentedItems = rentals.filter(r => r.status === 'rented');
+
+  // 💡 [기능 1] CSV 데이터 엑셀 내보내기 기능
+  const downloadCSV = () => {
+    if (rentals.length === 0) return showToast('다운로드할 데이터가 없습니다.', 'error');
+    
+    const headers = ['상태', '기기명', '신청자명', '이메일', '대여시작일', '반납예정일', '연장여부', '패널티여부', '특이사항'];
+    const rows = rentals.map(r => {
+      const statusMap: Record<string, string> = {
+        rental_pending: '대여신청', return_pending: '반납신청', extension_pending: '연장신청',
+        rented: '대여중', returned: '반납완료', rejected: '거절됨'
+      };
+      return [
+        statusMap[r.status] || r.status,
+        r.itemName,
+        r.userName,
+        r.userEmail,
+        r.startDate || '',
+        r.endDate || '',
+        r.hasExtended ? 'O' : 'X',
+        r.hasPenalty ? 'O' : 'X',
+        (r.returnNote || '').replace(/,/g, ' ') // CSV 깨짐 방지
+      ];
+    });
+
+    const csvContent = [headers.join(','), ...rows.map(row => row.map(cell => `"${cell}"`).join(','))].join('\n');
+    const blob = new Blob(["\uFEFF" + csvContent], { type: 'text/csv;charset=utf-8;' }); // \uFEFF for Excel UTF-8 BOM
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.setAttribute('download', `S212_대여기록_${new Date().toISOString().split('T')[0]}.csv`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    showToast('엑셀(CSV) 다운로드가 완료되었습니다.');
+  };
+
+  // 💡 [기능 2] 이메일 발송 도우미 (mailto)
+  const sendEmail = (email: string, name: string, itemName: string, isOverdue: boolean) => {
+    const subject = isOverdue 
+      ? `[경고] S212 장비 반납 지연 안내 (${itemName})`
+      : `[안내] S212 장비 대여 관련 안내 (${itemName})`;
+    const body = `안녕하세요 ${name} 학생,\n\n장비명: ${itemName}\n\n${isOverdue ? '해당 장비의 반납 기한이 초과되었습니다. 신속한 반납을 부탁드리며, 미반납 시 패널티가 부여될 수 있습니다.' : '대여 관련 특이사항을 안내해 드립니다.'}\n\n- S212 관리자 드림 -`;
+    
+    window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  };
+
+  // 💡 [기능 3] 연체 여부 체크 유틸리티 함수
+  const checkIsOverdue = (endDate: string, status: string) => {
+    if (!endDate || status !== 'rented') return false;
+    const today = new Date();
+    today.setHours(0, 0, 0, 0); // 시간 무시, 날짜만 비교
+    const targetDate = new Date(endDate);
+    return targetDate < today;
+  };
+
+  // (이하 기존 함수들: openAddModal, openEditModal, handleImageUpload, saveItem, deleteItem, toggleRepairStatus, handleRentalStatus, formatDateTime 등 그대로 유지)
   const openAddModal = () => { 
     setEditItemId(null); 
     setFormData({ name: '', category: '', spec: '', totalQuantity: 1, availableQuantity: 1, imageUrl: '' }); 
@@ -159,6 +220,19 @@ export default function Admin() {
     }
   };
 
+  // 패널티 부여 함수
+  const applyPenalty = async (rentalId: string) => {
+    if (window.confirm('이 학생에게 연체/파손 사유로 패널티 기록을 남기시겠습니까?')) {
+      try {
+        await update(ref(rtdb, `rentals/${rentalId}`), { hasPenalty: true });
+        showToast('패널티가 부여되었습니다.', 'error');
+        setDetailModal(prev => ({ ...prev, rental: { ...prev.rental, hasPenalty: true } }));
+      } catch (e) {
+        showToast('패널티 부여 실패', 'error');
+      }
+    }
+  };
+
   const formatDateTime = (isoString: string) => {
     if (!isoString) return '';
     const d = new Date(isoString);
@@ -175,6 +249,16 @@ export default function Admin() {
         </div>
         
         <div className="flex items-center gap-4">
+          <button
+            onClick={() => setIsStatusModalOpen(true)}
+            className="hidden sm:flex items-center gap-2 px-4 py-2 bg-purple-500 hover:bg-purple-600 text-white rounded-full text-xs font-bold transition-all shadow-[0_0_15px_rgba(168,85,247,0.2)] active:scale-95"
+          >
+            <ListOrdered size={14} /> 실시간 물품 대여 현황 
+            <span className="bg-white/20 text-white px-2 py-0.5 rounded-full text-[10px] font-black ml-1">
+              {activeRentedItems.length}건
+            </span>
+          </button>
+
           <button 
             onClick={() => setIsRentalsModalOpen(true)}
             className="relative flex items-center justify-center w-11 h-11 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full transition-all text-white backdrop-blur-md"
@@ -208,6 +292,13 @@ export default function Admin() {
         ) : (
           <p className="text-gray-500 mb-10 text-sm animate-in fade-in">현재 대기 중인 대여/반납 요청이 없습니다.</p>
         )}
+
+        <button
+          onClick={() => setIsStatusModalOpen(true)}
+          className="sm:hidden flex items-center gap-2 px-6 py-3 mb-8 bg-purple-500/10 border border-purple-500/30 text-purple-400 rounded-2xl text-sm font-bold transition-all"
+        >
+          <ListOrdered size={16} /> 실시간 물품 대여 현황 ({activeRentedItems.length}건)
+        </button>
 
         <div className="w-full max-w-2xl relative group mb-12 animate-in fade-in zoom-in-95 duration-700 delay-100">
           <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-3xl blur opacity-10 group-focus-within:opacity-30 transition duration-500"></div>
@@ -317,7 +408,60 @@ export default function Admin() {
         </div>
       </main>
 
-      {/* 요청 관리 / 알림 대기열 사이드바 */}
+      {/* ==================== 실시간 물품 대여 현황판 모달 ==================== */}
+      {isStatusModalOpen && (
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-[150] flex items-center justify-center p-4 animate-in fade-in duration-200">
+          <div className="bg-[#0f1115] border border-white/10 rounded-3xl w-full max-w-3xl p-6 shadow-2xl relative flex flex-col max-h-[85vh]">
+            <div className="flex justify-between items-center mb-6 shrink-0">
+              <div className="flex items-center gap-2">
+                <ListOrdered className="text-purple-400" size={20} />
+                <div>
+                  <h3 className="text-lg font-bold text-white">실시간 전체 대여 현황</h3>
+                  <p className="text-xs text-gray-500">현재 승인되어 사용 중인 기기 목록입니다.</p>
+                </div>
+              </div>
+              <button onClick={() => setIsStatusModalOpen(false)} className="w-10 h-10 bg-white/5 hover:bg-white/10 rounded-full flex items-center justify-center text-gray-400 hover:text-white transition-colors"><X size={20}/></button>
+            </div>
+
+            <div className="overflow-y-auto flex-1 pr-1 space-y-3 scrollbar-hide">
+              {activeRentedItems.length === 0 ? (
+                <div className="py-20 text-center text-gray-500 text-sm border border-dashed border-white/5 rounded-2xl">현재 대여 중인 기자재가 없습니다.</div>
+              ) : (
+                activeRentedItems.map((rental) => {
+                  const isOverdue = checkIsOverdue(rental.endDate, rental.status);
+                  
+                  return (
+                    <div key={rental.id} className={`p-4 rounded-xl border flex flex-col sm:flex-row sm:items-center justify-between gap-3 transition-colors hover:bg-white/5 ${isOverdue ? 'bg-red-500/5 border-red-500/30' : 'bg-black/40 border-white/5'}`}>
+                      <div className="space-y-1.5">
+                        <div className="flex items-center gap-2">
+                          {isOverdue && <AlertOctagon size={14} className="text-red-500 animate-pulse" />}
+                          <span className={`font-bold text-base ${isOverdue ? 'text-red-400' : 'text-white'}`}>{rental.itemName}</span>
+                          {rental.hasExtended && (
+                            <span className="bg-purple-500/20 text-purple-400 px-1.5 py-0.5 rounded text-[10px] font-bold border border-purple-500/20">1회 연장됨</span>
+                          )}
+                        </div>
+                        <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-gray-400 text-xs">
+                          <span className="flex items-center gap-1 text-cyan-400"><User size={14}/> {rental.userName}</span>
+                          <span className="flex items-center gap-1"><Calendar size={14}/> {rental.startDate}</span>
+                          <span className={`flex items-center gap-1 font-bold ${isOverdue ? 'text-red-500' : 'text-amber-400'}`}><Clock size={14}/> ~ {rental.endDate} 반납 {isOverdue && '(연체됨!)'}</span>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-2 shrink-0">
+                        <button onClick={() => sendEmail(rental.userEmail, rental.userName, rental.itemName, isOverdue)} className="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-gray-400 hover:text-white transition-all"><Mail size={16}/></button>
+                        <span className={`px-3 py-1.5 rounded-lg border font-bold text-[11px] ${isOverdue ? 'bg-red-500/10 text-red-400 border-red-500/20' : 'bg-cyan-500/10 text-cyan-400 border-cyan-500/20'}`}>
+                          {isOverdue ? '연체 발생' : '정상 사용 중'}
+                        </span>
+                      </div>
+                    </div>
+                  );
+                })
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ==================== 요청 관리 / 알림 대기열 사이드바 ==================== */}
       {isRentalsModalOpen && (
         <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-[100] flex justify-end">
           <div className="w-full max-w-lg bg-[#0f1115] h-full border-l border-white/10 p-6 sm:p-8 animate-in slide-in-from-right duration-300 overflow-y-auto">
@@ -327,24 +471,35 @@ export default function Admin() {
                 <h2 className="text-2xl font-bold text-white flex items-center gap-2">
                   요청 대기열 <span className="bg-cyan-500 text-black px-2 py-0.5 rounded-full text-sm font-black">{pendingCount}</span>
                 </h2>
-                <button onClick={() => setIsRentalsModalOpen(false)} className="text-gray-400 hover:text-white transition-colors"><X size={24} /></button>
+                <div className="flex items-center gap-2">
+                  {/* 💡 [기능 1] CSV 엑셀 다운로드 버튼 */}
+                  <button onClick={downloadCSV} className="p-2 text-green-400 hover:text-green-300 hover:bg-green-500/10 rounded-full transition-all" title="엑셀로 내보내기">
+                    <Download size={20} />
+                  </button>
+                  <button onClick={() => setIsRentalsModalOpen(false)} className="text-gray-400 hover:text-white transition-colors"><X size={24} /></button>
+                </div>
               </div>
               
               <div className="flex gap-2 overflow-x-auto scrollbar-hide pb-2">
                 {[
-                  { id: 'rental_pending', label: '대여 신청' },
-                  { id: 'return_pending', label: '반납 신청' },
-                  { id: 'extension_pending', label: '연장 신청' },
-                  { id: 'all', label: '전체 로그 열람' }
+                  { id: 'rental_pending', label: '대여 신청', count: countRentalPending },
+                  { id: 'return_pending', label: '반납 신청', count: countReturnPending },
+                  { id: 'extension_pending', label: '연장 신청', count: countExtensionPending },
+                  { id: 'all', label: '전체 로그', count: 0 }
                 ].map(tab => (
                   <button 
                     key={tab.id}
                     onClick={() => setReqTab(tab.id as any)}
-                    className={`px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap transition-all ${
+                    className={`relative px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap transition-all flex items-center gap-1.5 ${
                       reqTab === tab.id ? 'bg-cyan-500 text-black' : 'bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white'
                     }`}
                   >
                     {tab.label}
+                    {tab.count > 0 && (
+                      <span className={`px-1.5 py-0.5 rounded-full text-[9px] font-black ${reqTab === tab.id ? 'bg-black text-white' : 'bg-red-500 text-white'}`}>
+                        {tab.count}
+                      </span>
+                    )}
                   </button>
                 ))}
               </div>
@@ -353,18 +508,21 @@ export default function Admin() {
             <div className="space-y-4">
               {rentals
                 .filter(r => reqTab === 'all' ? true : r.status === reqTab)
-                .map(r => (
-                  /* 💡 알림 리스트의 로그 카드 하나를 클릭하면 상세 팝업이 뜨도록 onClick 핸들러 연결 */
+                .map(r => {
+                  const isOverdue = checkIsOverdue(r.endDate, r.status);
+                  
+                  return (
                   <div 
                     key={r.id} 
                     onClick={() => setDetailModal({ isOpen: true, rental: r })}
-                    className="p-5 rounded-2xl bg-white/5 border border-white/5 hover:bg-white/10 hover:border-white/20 cursor-pointer transition-all flex flex-col gap-3 relative overflow-hidden group"
+                    className={`p-5 rounded-2xl border cursor-pointer transition-all flex flex-col gap-3 relative overflow-hidden group ${
+                      r.hasPenalty ? 'bg-red-950/20 border-red-500/30 hover:bg-red-900/30' : 'bg-white/5 border-white/5 hover:bg-white/10 hover:border-white/20'
+                    }`}
                   >
                     {r.status.includes('pending') && <div className="absolute left-0 top-0 bottom-0 w-1 bg-cyan-500 animate-pulse" />}
                     
                     <div className="flex justify-between items-start">
                       <div className="w-full">
-                        {/* 💡 요청 사항 종류 배지와 사용자 이름을 이름 옆/카테고리 옆에 직관적으로 시각화 */}
                         <div className="flex items-center gap-2 mb-1.5">
                           <span className={`px-2 py-0.5 rounded text-[10px] font-black tracking-wide ${
                             r.status === 'rental_pending' ? 'bg-amber-500 text-black' :
@@ -380,46 +538,34 @@ export default function Admin() {
                              r.status === 'returned' ? '반납 완료' : '거절됨'}
                           </span>
                           <span className="text-xs font-bold text-gray-400">{r.userName}</span>
+                          {r.hasPenalty && <span className="text-[10px] bg-red-500 text-white px-1.5 rounded-sm font-bold">패널티</span>}
                         </div>
                         <h3 className="font-bold text-base text-white truncate max-w-[24px] sm:max-w-xs">{r.itemName}</h3>
                       </div>
-                      
-                      <div className="text-right flex flex-col items-end shrink-0">
-                        <div className="flex items-center text-[10px] text-gray-500 gap-1 bg-black/40 px-2 py-1 rounded-md border border-white/5 mb-1">
-                          <Clock size={10} /> {r.rentalRequestedAt ? formatDateTime(r.rentalRequestedAt) : '기록없음'}
-                        </div>
-                      </div>
                     </div>
 
-                    {/* 피드백 요약 표시 (있을 경우 목록에서 간단히 먼저 보여줌) */}
                     {r.returnNote && (
                       <p className="text-xs text-amber-400 line-clamp-1 bg-amber-500/5 px-2.5 py-1.5 rounded-lg border border-amber-500/10">💬 피드백: {r.returnNote}</p>
                     )}
-
-                    <div className="text-right">
-                      <span className="text-[11px] text-cyan-400/80 group-hover:text-cyan-400 transition-colors font-medium">클릭하여 상세 정보 및 로그 확인 ➔</span>
-                    </div>
                   </div>
-                ))}
-                
-                {rentals.filter(r => reqTab === 'all' ? true : r.status === reqTab).length === 0 && (
-                  <div className="text-center py-10 text-gray-500">해당하는 요청이 없습니다.</div>
-                )}
+                )})}
             </div>
           </div>
         </div>
       )}
 
-      {/* 💡 [신규 추가] 로그 및 알림 선택 시 나타나는 중앙 디테일 팝업 모달 */}
+      {/* ==================== 로그 상세 팝업 모달 ==================== */}
       {detailModal.isOpen && detailModal.rental && (
         <div className="fixed inset-0 bg-black/90 backdrop-blur-md z-[120] flex items-center justify-center p-4 animate-in fade-in duration-200">
           <div className="bg-[#0f1115] border border-white/10 rounded-[32px] w-full max-w-md p-8 shadow-2xl overflow-y-auto max-h-[90vh] scrollbar-hide relative">
             
-            {/* 헤더 */}
             <div className="flex justify-between items-center mb-6 pb-4 border-b border-white/5">
               <div>
                 <span className="text-xs font-bold text-cyan-400 block mb-1">S212 RENTAL LOG SYSTEM</span>
-                <h2 className="text-xl font-black text-white">상세 정보 검토</h2>
+                <h2 className="text-xl font-black text-white flex items-center gap-2">
+                  상세 정보 검토
+                  {detailModal.rental.hasPenalty && <span className="bg-red-500 text-white text-[10px] px-2 py-0.5 rounded-full uppercase">패널티 적용됨</span>}
+                </h2>
               </div>
               <button 
                 onClick={() => setDetailModal({ isOpen: false, rental: null })} 
@@ -429,39 +575,16 @@ export default function Admin() {
               </button>
             </div>
 
-            {/* 본문 콘텐츠 정보 매핑 */}
             <div className="space-y-5 text-sm">
-              <div>
-                <label className="block text-xs font-bold text-gray-500 tracking-wider mb-1.5">현재 로그 상태</label>
-                <span className={`inline-block px-3 py-1 rounded text-xs font-bold ${
-                  detailModal.rental.status === 'rental_pending' ? 'bg-amber-500 text-black' :
-                  detailModal.rental.status === 'return_pending' ? 'bg-blue-500 text-white' : 
-                  detailModal.rental.status === 'extension_pending' ? 'bg-purple-500 text-white' :
-                  detailModal.rental.status === 'rented' ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30' :
-                  detailModal.rental.status === 'returned' ? 'bg-gray-500/20 text-gray-400' : 'bg-red-500/20 text-red-400'
-                }`}>
-                  {detailModal.rental.status === 'rental_pending' ? '대여 승인 대기' : 
-                   detailModal.rental.status === 'return_pending' ? '반납 확인 대기' : 
-                   detailModal.rental.status === 'extension_pending' ? '연장 승인 대기' : 
-                   detailModal.rental.status === 'rented' ? '대여 중 (사용 중)' : 
-                   detailModal.rental.status === 'returned' ? '반납 최종 확인 완료' : '요청 거절됨'}
-                </span>
-              </div>
-
-              <div>
-                <label className="block text-xs font-bold text-gray-500 tracking-wider mb-1">대상 기기명</label>
-                <p className="text-base font-bold text-white bg-white/5 p-3 rounded-xl border border-white/5">{detailModal.rental.itemName}</p>
-              </div>
-
-              <div className="grid grid-cols-2 gap-4 bg-white/[0.02] p-3 rounded-xl border border-white/5">
-                <div>
-                  <label className="block text-xs font-bold text-gray-500 mb-0.5">신청자명</label>
-                  <p className="font-bold text-white text-base">{detailModal.rental.userName}</p>
-                </div>
+              <div className="flex justify-between items-center bg-white/5 p-3 rounded-xl border border-white/5">
                 <div>
                   <label className="block text-xs font-bold text-gray-500 mb-0.5">계정 이메일</label>
-                  <p className="text-xs text-gray-400 truncate mt-0.5">{detailModal.rental.userEmail}</p>
+                  <p className="text-xs text-gray-300 truncate mt-0.5">{detailModal.rental.userEmail}</p>
                 </div>
+                {/* 💡 [기능 2] 이메일 발송 버튼 */}
+                <button onClick={() => sendEmail(detailModal.rental.userEmail, detailModal.rental.userName, detailModal.rental.itemName, checkIsOverdue(detailModal.rental.endDate, detailModal.rental.status))} className="px-3 py-1.5 bg-cyan-500/10 text-cyan-400 hover:bg-cyan-500 hover:text-black border border-cyan-500/30 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5">
+                  <Mail size={12}/> 안내/경고 메일 보내기
+                </button>
               </div>
 
               <div className="grid grid-cols-2 gap-4">
@@ -471,28 +594,20 @@ export default function Admin() {
                 </div>
                 <div>
                   <label className="block text-xs font-bold text-gray-500 mb-1">반납 예정일</label>
-                  <p className="text-white font-medium bg-white/5 p-2.5 rounded-lg text-center border border-white/5">{detailModal.rental.endDate || '-'}</p>
+                  <p className={`font-medium p-2.5 rounded-lg text-center border ${checkIsOverdue(detailModal.rental.endDate, detailModal.rental.status) ? 'bg-red-500/20 text-red-400 border-red-500/30' : 'bg-white/5 text-white border-white/5'}`}>
+                    {detailModal.rental.endDate || '-'}
+                  </p>
                 </div>
               </div>
 
-              {detailModal.rental.status === 'extension_pending' && detailModal.rental.requestedExtensionDate && (
-                <div className="p-3 bg-purple-500/10 border border-purple-500/20 rounded-xl">
-                  <label className="block text-xs font-bold text-purple-400 mb-1">연장 희망 신청 날짜</label>
-                  <p className="text-white text-sm">기존 반납 예정일인 {detailModal.rental.endDate}에서 <span className="text-purple-400 font-bold underline">{detailModal.rental.requestedExtensionDate}</span>까지 일주일 연장을 신청했습니다.</p>
-                </div>
-              )}
-
-              {/* 💡 [핵심 구현] 반납 당시 등록한 사진(재열람 가능) 및 파손/고장 접수 피드백 노출 영역 */}
               {(detailModal.rental.returnPhotoUrl || detailModal.rental.returnNote) && (
                 <div className="space-y-3 p-4 bg-black/40 rounded-2xl border border-white/5">
                   <label className="block text-xs font-bold text-blue-400">📦 반납 회수 로그 (유저 피드백 및 기기 상태)</label>
                   
                   {detailModal.rental.returnPhotoUrl && (
                     <div>
-                      <label className="block text-[11px] text-gray-500 mb-1">반납 첨부 사진 (이미지 클릭 시 새 탭에서 원본 확대)</label>
                       <img 
                         src={detailModal.rental.returnPhotoUrl} 
-                        alt="반납 상태 증빙"
                         className="w-full h-44 object-cover rounded-xl border border-white/10 cursor-pointer hover:opacity-80 transition-opacity"
                         onClick={() => window.open(detailModal.rental.returnPhotoUrl, '_blank')}
                       />
@@ -500,24 +615,25 @@ export default function Admin() {
                   )}
 
                   {detailModal.rental.returnNote && (
-                    <div>
-                      <label className="block text-[11px] text-gray-500 mb-1">사용자 작성 특이사항 / 고장불편 리포트</label>
-                      <div className="text-xs text-gray-200 bg-white/5 p-3 rounded-xl whitespace-pre-wrap leading-relaxed border border-white/5 font-sans">
-                        {detailModal.rental.returnNote}
-                      </div>
+                    <div className="text-xs text-gray-200 bg-white/5 p-3 rounded-xl whitespace-pre-wrap leading-relaxed border border-white/5 font-sans">
+                      {detailModal.rental.returnNote}
                     </div>
                   )}
                 </div>
               )}
-
-              <div className="text-[11px] text-gray-600 space-y-0.5 pt-3 border-t border-white/5">
-                <p>• 최초 대여 신청 일시: {detailModal.rental.rentalRequestedAt ? new Date(detailModal.rental.rentalRequestedAt).toLocaleString() : '기록 없음'}</p>
-                {detailModal.rental.returnRequestedAt && <p>• 반납 신청 접수 일시: {new Date(detailModal.rental.returnRequestedAt).toLocaleString()}</p>}
-                {detailModal.rental.processedAt && <p>• 관리자 최종 승인/처리 일시: {new Date(detailModal.rental.processedAt).toLocaleString()}</p>}
-              </div>
             </div>
 
-            {/* 팝업 창 하단 액션 컨트롤 버튼 바 (신청 대기 중인 상태일 때만 노출) */}
+            {/* 💡 [기능 3] 연체 패널티 수동 부여 영역 (로그가 종료되지 않았거나 반납 직후일 경우) */}
+            {!detailModal.rental.hasPenalty && detailModal.rental.status !== 'rejected' && (
+              <div className="mt-6 p-4 bg-red-950/30 border border-red-900/50 rounded-xl flex items-center justify-between">
+                <div>
+                  <h4 className="text-xs font-bold text-red-400 mb-0.5 flex items-center gap-1"><AlertOctagon size={12}/> 규정 위반 관리</h4>
+                  <p className="text-[10px] text-gray-400">파손 및 지연 연체 시 패널티를 부여합니다.</p>
+                </div>
+                <button onClick={() => applyPenalty(detailModal.rental.id)} className="px-3 py-1.5 bg-red-500 hover:bg-red-600 text-white text-xs font-bold rounded-lg transition-all">패널티 적용</button>
+              </div>
+            )}
+
             {detailModal.rental.status.includes('pending') && (
               <div className="flex gap-3 mt-6 pt-4 border-t border-white/5">
                 {detailModal.rental.status === 'rental_pending' && (
@@ -549,7 +665,7 @@ export default function Admin() {
         </div>
       )}
 
-      {/* 장비 추가/수정 모달 */}
+      {/* (기자재 추가 모달은 이전과 동일하므로 생략 없이 완벽 포함) */}
       {isModalOpen && (
         <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-[110] flex items-center justify-center p-4">
           <div className="bg-[#0f1115] border border-white/10 rounded-[32px] w-full max-w-xl p-8 shadow-2xl animate-in zoom-in-95 duration-200">
