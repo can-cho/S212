@@ -5,8 +5,8 @@ import { useNavigate } from 'react-router-dom';
 import { 
   Search, Plus, Edit, Trash2, X, Image, 
   Loader2, Camera, Home, LayoutGrid, Grid, List, Zap, Bell, Clock, 
-  ShieldAlert, CheckCircle, AlertCircle, Eye, ListOrdered, User, Calendar,
-  Download, Mail, AlertOctagon // 💡 추가된 아이콘
+  ShieldAlert, CheckCircle, AlertCircle, ListOrdered, User, Calendar,
+  Download, Mail, AlertOctagon // 💡 'Eye' 아이콘 완벽 제거
 } from 'lucide-react';
 import { useAuthStore } from '../store/useAuthStore'; 
 
@@ -74,7 +74,7 @@ export default function Admin() {
 
   const activeRentedItems = rentals.filter(r => r.status === 'rented');
 
-  // 💡 [기능 1] CSV 데이터 엑셀 내보내기 기능
+  // CSV 데이터 엑셀 내보내기 기능
   const downloadCSV = () => {
     if (rentals.length === 0) return showToast('다운로드할 데이터가 없습니다.', 'error');
     
@@ -93,12 +93,12 @@ export default function Admin() {
         r.endDate || '',
         r.hasExtended ? 'O' : 'X',
         r.hasPenalty ? 'O' : 'X',
-        (r.returnNote || '').replace(/,/g, ' ') // CSV 깨짐 방지
+        (r.returnNote || '').replace(/,/g, ' ')
       ];
     });
 
     const csvContent = [headers.join(','), ...rows.map(row => row.map(cell => `"${cell}"`).join(','))].join('\n');
-    const blob = new Blob(["\uFEFF" + csvContent], { type: 'text/csv;charset=utf-8;' }); // \uFEFF for Excel UTF-8 BOM
+    const blob = new Blob(["\uFEFF" + csvContent], { type: 'text/csv;charset=utf-8;' });
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
@@ -109,7 +109,7 @@ export default function Admin() {
     showToast('엑셀(CSV) 다운로드가 완료되었습니다.');
   };
 
-  // 💡 [기능 2] 이메일 발송 도우미 (mailto)
+  // 이메일 발송 도우미 (mailto)
   const sendEmail = (email: string, name: string, itemName: string, isOverdue: boolean) => {
     const subject = isOverdue 
       ? `[경고] S212 장비 반납 지연 안내 (${itemName})`
@@ -119,16 +119,17 @@ export default function Admin() {
     window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
-  // 💡 [기능 3] 연체 여부 체크 유틸리티 함수
+  // 연체 여부 체크 유틸리티 함수
   const checkIsOverdue = (endDate: string, status: string) => {
     if (!endDate || status !== 'rented') return false;
     const today = new Date();
-    today.setHours(0, 0, 0, 0); // 시간 무시, 날짜만 비교
+    today.setHours(0, 0, 0, 0);
     const targetDate = new Date(endDate);
     return targetDate < today;
   };
 
-  // (이하 기존 함수들: openAddModal, openEditModal, handleImageUpload, saveItem, deleteItem, toggleRepairStatus, handleRentalStatus, formatDateTime 등 그대로 유지)
+  // 💡 사용하지 않는 'formatDateTime' 함수 제거 완료
+
   const openAddModal = () => { 
     setEditItemId(null); 
     setFormData({ name: '', category: '', spec: '', totalQuantity: 1, availableQuantity: 1, imageUrl: '' }); 
@@ -220,7 +221,6 @@ export default function Admin() {
     }
   };
 
-  // 패널티 부여 함수
   const applyPenalty = async (rentalId: string) => {
     if (window.confirm('이 학생에게 연체/파손 사유로 패널티 기록을 남기시겠습니까?')) {
       try {
@@ -231,12 +231,6 @@ export default function Admin() {
         showToast('패널티 부여 실패', 'error');
       }
     }
-  };
-
-  const formatDateTime = (isoString: string) => {
-    if (!isoString) return '';
-    const d = new Date(isoString);
-    return `${d.getMonth() + 1}월 ${d.getDate()}일 ${d.getHours().toString().padStart(2, '0')}:${d.getMinutes().toString().padStart(2, '0')}`;
   };
 
   return (
@@ -472,7 +466,6 @@ export default function Admin() {
                   요청 대기열 <span className="bg-cyan-500 text-black px-2 py-0.5 rounded-full text-sm font-black">{pendingCount}</span>
                 </h2>
                 <div className="flex items-center gap-2">
-                  {/* 💡 [기능 1] CSV 엑셀 다운로드 버튼 */}
                   <button onClick={downloadCSV} className="p-2 text-green-400 hover:text-green-300 hover:bg-green-500/10 rounded-full transition-all" title="엑셀로 내보내기">
                     <Download size={20} />
                   </button>
@@ -508,10 +501,7 @@ export default function Admin() {
             <div className="space-y-4">
               {rentals
                 .filter(r => reqTab === 'all' ? true : r.status === reqTab)
-                .map(r => {
-                  const isOverdue = checkIsOverdue(r.endDate, r.status);
-                  
-                  return (
+                .map(r => (
                   <div 
                     key={r.id} 
                     onClick={() => setDetailModal({ isOpen: true, rental: r })}
@@ -540,7 +530,7 @@ export default function Admin() {
                           <span className="text-xs font-bold text-gray-400">{r.userName}</span>
                           {r.hasPenalty && <span className="text-[10px] bg-red-500 text-white px-1.5 rounded-sm font-bold">패널티</span>}
                         </div>
-                        <h3 className="font-bold text-base text-white truncate max-w-[24px] sm:max-w-xs">{r.itemName}</h3>
+                        <h3 className="font-bold text-base text-white truncate max-w-xs">{r.itemName}</h3>
                       </div>
                     </div>
 
@@ -548,7 +538,7 @@ export default function Admin() {
                       <p className="text-xs text-amber-400 line-clamp-1 bg-amber-500/5 px-2.5 py-1.5 rounded-lg border border-amber-500/10">💬 피드백: {r.returnNote}</p>
                     )}
                   </div>
-                )})}
+                ))}
             </div>
           </div>
         </div>
@@ -581,7 +571,7 @@ export default function Admin() {
                   <label className="block text-xs font-bold text-gray-500 mb-0.5">계정 이메일</label>
                   <p className="text-xs text-gray-300 truncate mt-0.5">{detailModal.rental.userEmail}</p>
                 </div>
-                {/* 💡 [기능 2] 이메일 발송 버튼 */}
+                {/* 💡 'isOverdue' 컴파일 에러 해결을 위해 인라인 삼항연산자로 조건 직접 투입 */}
                 <button onClick={() => sendEmail(detailModal.rental.userEmail, detailModal.rental.userName, detailModal.rental.itemName, checkIsOverdue(detailModal.rental.endDate, detailModal.rental.status))} className="px-3 py-1.5 bg-cyan-500/10 text-cyan-400 hover:bg-cyan-500 hover:text-black border border-cyan-500/30 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5">
                   <Mail size={12}/> 안내/경고 메일 보내기
                 </button>
@@ -623,7 +613,6 @@ export default function Admin() {
               )}
             </div>
 
-            {/* 💡 [기능 3] 연체 패널티 수동 부여 영역 (로그가 종료되지 않았거나 반납 직후일 경우) */}
             {!detailModal.rental.hasPenalty && detailModal.rental.status !== 'rejected' && (
               <div className="mt-6 p-4 bg-red-950/30 border border-red-900/50 rounded-xl flex items-center justify-between">
                 <div>
@@ -665,7 +654,6 @@ export default function Admin() {
         </div>
       )}
 
-      {/* (기자재 추가 모달은 이전과 동일하므로 생략 없이 완벽 포함) */}
       {isModalOpen && (
         <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-[110] flex items-center justify-center p-4">
           <div className="bg-[#0f1115] border border-white/10 rounded-[32px] w-full max-w-xl p-8 shadow-2xl animate-in zoom-in-95 duration-200">
